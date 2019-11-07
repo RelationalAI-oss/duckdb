@@ -24,6 +24,8 @@ public:
 	SQLType target_type;
 
 public:
+    bool IsFoldable() const override;
+
 	string ToString() const override;
 
 	bool Equals(const BaseExpression *other) const override;

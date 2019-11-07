@@ -9,6 +9,13 @@ BoundCastExpression::BoundCastExpression(TypeId target, unique_ptr<Expression> c
       source_type(source_type), target_type(target_type) {
 }
 
+bool BoundCastExpression::IsFoldable() const {
+    if(target_type.id == SQLTypeId::DATE) {
+        return false;
+    }
+    return true;
+}
+
 string BoundCastExpression::ToString() const {
 	return "CAST[" + TypeIdToString(return_type) + "](" + child->GetName() + ")";
 }
