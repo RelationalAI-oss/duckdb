@@ -1,7 +1,6 @@
-#include "common/exception.hpp"
-#include "common/string_util.hpp"
-#include "parser/transformer.hpp"
-#include <iostream>
+#include "duckdb/common/exception.hpp"
+#include "duckdb/common/string_util.hpp"
+#include "duckdb/parser/transformer.hpp"
 #include <nodes/pg_list.h>
 
 using namespace duckdb;

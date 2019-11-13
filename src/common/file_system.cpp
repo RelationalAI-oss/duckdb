@@ -1,9 +1,9 @@
-#include "common/file_system.hpp"
+#include "duckdb/common/file_system.hpp"
 
-#include "common/exception.hpp"
-#include "common/helper.hpp"
-#include "common/string_util.hpp"
-#include "common/checksum.hpp"
+#include "duckdb/common/exception.hpp"
+#include "duckdb/common/helper.hpp"
+#include "duckdb/common/string_util.hpp"
+#include "duckdb/common/checksum.hpp"
 
 using namespace duckdb;
 using namespace std;
@@ -430,7 +430,7 @@ static void delete_dir_special_snowflake_windows(string directory) {
 	WIN32_FIND_DATA ffd;
 	HANDLE hFind = FindFirstFile(szDir, &ffd);
 	if (hFind == INVALID_HANDLE_VALUE) {
-		throw IOException("Could not find directory");
+		return;
 	}
 
 	do {

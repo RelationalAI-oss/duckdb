@@ -1,8 +1,8 @@
-#include "planner/expression/bound_function_expression.hpp"
+#include "duckdb/planner/expression/bound_function_expression.hpp"
 
-#include "catalog/catalog_entry/scalar_function_catalog_entry.hpp"
-#include "common/types/hash.hpp"
-#include "planner/expression_iterator.hpp"
+#include "duckdb/catalog/catalog_entry/scalar_function_catalog_entry.hpp"
+#include "duckdb/common/types/hash.hpp"
+#include "duckdb/planner/expression_iterator.hpp"
 
 using namespace duckdb;
 using namespace std;

@@ -1,8 +1,8 @@
-#include "common/types.hpp"
-#include "common/types/timestamp.hpp"
+#include "duckdb/common/types.hpp"
+#include "duckdb/common/types/timestamp.hpp"
 
-#include "common/exception.hpp"
-#include "common/serializer.hpp"
+#include "duckdb/common/exception.hpp"
+#include "duckdb/common/serializer.hpp"
 
 #include <cmath>
 

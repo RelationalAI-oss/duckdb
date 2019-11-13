@@ -1,7 +1,7 @@
-#include "common/types/date.hpp"
-#include "common/types/time.hpp"
-#include "common/types/timestamp.hpp"
-#include "common/vector_operations/vector_operations.hpp"
+#include "duckdb/common/types/date.hpp"
+#include "duckdb/common/types/time.hpp"
+#include "duckdb/common/types/timestamp.hpp"
+#include "duckdb/common/vector_operations/vector_operations.hpp"
 #include "duckdb.h"
 #include "duckdb.hpp"
 
@@ -351,6 +351,10 @@ duckdb_state duckdb_bind_double(duckdb_prepared_statement prepared_statement, in
 
 duckdb_state duckdb_bind_varchar(duckdb_prepared_statement prepared_statement, index_t param_idx, const char *val) {
 	return duckdb_bind_value(prepared_statement, param_idx, Value(val));
+}
+
+duckdb_state duckdb_bind_null(duckdb_prepared_statement prepared_statement, index_t param_idx) {
+	return duckdb_bind_value(prepared_statement, param_idx, Value());
 }
 
 duckdb_state duckdb_execute_prepared(duckdb_prepared_statement prepared_statement, duckdb_result *out_result) {
