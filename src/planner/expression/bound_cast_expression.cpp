@@ -13,7 +13,7 @@ bool BoundCastExpression::IsFoldable() const {
     if(target_type.id == SQLTypeId::DATE) {
         return false;
     }
-    return true;
+    return Expression::IsFoldable();
 }
 
 string BoundCastExpression::ToString() const {
